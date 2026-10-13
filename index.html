@@ -220,8 +220,26 @@ footer .fl{display:flex;gap:28px}
 footer .fl a{text-decoration:none;font-weight:600;font-size:14.5px;color:var(--muted);transition:color .3s}
 footer .fl a:hover{color:var(--gold2)}
 footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1.7}
+/* ---------- 3D shapes & particles ---------- */
+.shape{position:absolute;pointer-events:none;z-index:1}
+.ring-a{width:580px;height:580px;right:-150px;top:4%;border:1px solid rgba(212,175,94,.22);border-radius:50%;animation:spinA 28s linear infinite}
+.ring-b{width:400px;height:400px;right:-60px;top:20%;border:1px dashed rgba(212,175,94,.16);border-radius:50%;animation:spinB 36s linear infinite}
+@keyframes spinA{from{transform:rotateX(74deg) rotateZ(0)}to{transform:rotateX(74deg) rotateZ(360deg)}}
+@keyframes spinB{from{transform:rotateX(74deg) rotateZ(360deg)}to{transform:rotateX(74deg) rotateZ(0)}}
+.particles{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.particles i{position:absolute;width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.45;animation:floatP 9s ease-in-out infinite}
+.particles i:nth-child(1){left:12%;top:22%;animation-delay:0s}
+.particles i:nth-child(2){left:24%;top:68%;animation-delay:1.4s;width:4px;height:4px}
+.particles i:nth-child(3){left:46%;top:14%;animation-delay:2.8s}
+.particles i:nth-child(4){left:58%;top:76%;animation-delay:.8s;width:6px;height:6px;opacity:.3}
+.particles i:nth-child(5){left:70%;top:30%;animation-delay:2s;width:4px;height:4px}
+.particles i:nth-child(6){left:84%;top:60%;animation-delay:3.6s}
+.particles i:nth-child(7){left:36%;top:44%;animation-delay:4.4s;width:3px;height:3px;opacity:.35}
+.particles i:nth-child(8){left:8%;top:52%;animation-delay:5.2s;width:4px;height:4px}
+@keyframes floatP{0%,100%{transform:translateY(0)}50%{transform:translateY(-36px)}}
 /* ---------- responsive ---------- */
 @media(max-width:1020px){
+  .ring-a,.ring-b{display:none}
   .hero-inner{grid-template-columns:1fr;gap:80px}
   .photo-wrap{order:-1}
   .photo-frame{width:min(300px,72vw)}
@@ -281,6 +299,9 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
   <div class="orb orb-1" data-parallax="18" aria-hidden="true"></div>
   <div class="orb orb-2" data-parallax="-24" aria-hidden="true"></div>
   <div class="orb orb-3" data-parallax="12" aria-hidden="true"></div>
+  <div class="shape ring-a" aria-hidden="true"></div>
+  <div class="shape ring-b" aria-hidden="true"></div>
+  <div class="particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <span class="eyebrow" data-hero-fade>CA Inter · QuickBooks Online Specialist</span>
@@ -558,8 +579,10 @@ if (hasGSAP && !reduced) {
 /* ---------- scroll reveals ---------- */
 if (hasGSAP && typeof ScrollTrigger !== 'undefined' && !reduced) {
   gsap.utils.toArray('[data-reveal]').forEach(function(el){
-    gsap.from(el, { y: 44, opacity: 0, duration: 1, ease: 'power3.out',
-      scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    gsap.from(el, { y: 60, opacity: 0, rotationX: -14, transformPerspective: 900, transformOrigin: 'center top', duration: 1.1, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+      onStart: function(){ el.style.transition = 'none'; },
+      onComplete: function(){ el.style.transition = ''; } });
   });
   /* parallax orbs */
   gsap.utils.toArray('[data-parallax]').forEach(function(el){
@@ -623,6 +646,19 @@ if (!reduced && window.matchMedia('(hover:hover)').matches) {
   wrap.addEventListener('mouseleave', function(){
     frame.style.transform = '';
     if (glare) glare.style.opacity = '0';
+  });
+})();
+
+/* ---------- 3D tilt on cards ---------- */
+(function(){
+  if (reduced || !window.matchMedia('(hover:hover)').matches) return;
+  document.querySelectorAll('.svc, .price, .fit-card').forEach(function(card){
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      card.style.transform = 'translateY(-6px) perspective(900px) rotateX(' + ((.5 - py) * 10).toFixed(2) + 'deg) rotateY(' + ((px - .5) * 12).toFixed(2) + 'deg)';
+    });
+    card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
   });
 })();
 
