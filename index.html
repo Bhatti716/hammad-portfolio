@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hammad — QuickBooks Cleanup Expert | From Messy Books to Audit-Ready</title>
+<meta name="description" content="Hammad is a CA Inter accounting professional specialising in forensic QuickBooks Online cleanup, catch-up bookkeeping and bank reconciliation. Fixed-price quotes, free file diagnostic, verification report with every cleanup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e1b2e; --navy2:#152742; --navy3:#1d3252;
+  --gold:#c9a24b; --gold-soft:#e8d5a3; --gold-faint:#f6efdc;
+  --cream:#faf6ee; --white:#ffffff;
+  --ink:#1a2332; --muted:#5b6b82; --line:#e7e0d2;
+  --green:#1f7a4d; --green-bg:#e9f4ed; --red:#b3402e; --red-bg:#f9e9e5;
+  --radius:14px; --shadow:0 18px 45px -18px rgba(14,27,46,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.sec-title{font-size:clamp(30px,4vw,44px);margin-bottom:14px}
+.sec-sub{color:var(--muted);font-size:17px;max-width:640px;margin-bottom:52px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+nav .bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+nav.scrolled{background:rgba(250,246,238,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+nav:not(.scrolled) .brand{color:#fff}
+nav:not(.scrolled) .nav-links a{color:#dbe4f0}
+nav:not(.scrolled) .nav-links a:hover{color:var(--gold-soft)}
+nav:not(.scrolled) .burger span{background:#fff}
+nav:not(.scrolled) .nav-links .btn-navy{background:var(--gold);color:var(--navy)}
+.brand{font-family:'Fraunces',serif;font-size:24px;font-weight:700;color:var(--navy);text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--ink)}
+.nav-links a:hover{color:var(--gold)}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:14px 28px;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#0e1b2e;box-shadow:0 10px 24px -10px rgba(201,162,75,.7)}
+.btn-gold:hover{background:#d4ae58}
+.btn-outline{border:1.5px solid rgba(255,255,255,.45);color:#fff;background:transparent}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy3)}
+.btn-sm{padding:10px 22px;font-size:14px}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0;transition:.3s}
+/* ---------- HERO ---------- */
+.hero{background:radial-gradient(1200px 600px at 80% -10%,#22395e 0%,var(--navy) 55%);color:#fff;padding:168px 0 110px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 12% 110%,rgba(201,162,75,.14),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(40px,5.4vw,64px);margin:18px 0 20px}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero p.lead{font-size:18px;color:#c7d2e3;max-width:520px;margin-bottom:36px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero-note{margin-top:22px;font-size:13.5px;color:#8fa1bb}
+.hero-note strong{color:var(--gold-soft)}
+/* before/after visual */
+.ba{display:flex;flex-direction:column;gap:14px}
+.ledger{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:20px 22px;backdrop-filter:blur(4px)}
+.ledger h4{font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;font-family:'Inter',sans-serif}
+.ledger.before h4{color:#f0a08d}
+.ledger.after h4{color:#8fd6a8}
+.ledger ul{list-style:none;font-size:14px}
+.ledger li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.1)}
+.ledger li:last-child{border:none}
+.ledger.before li{color:#e8b7a9}
+.ledger.after li{color:#c4e6d2}
+.ledger .tick{color:#8fd6a8;font-weight:700}
+.ba-arrow{text-align:center;color:var(--gold);font-size:26px;line-height:1}
+.ba-cap{font-size:11.5px;color:#7d90ab;text-align:center;letter-spacing:.06em}
+/* ---------- TRUST STRIP ---------- */
+.trust{background:var(--white);border-bottom:1px solid var(--line);padding:34px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.trust-item{display:flex;gap:14px;align-items:flex-start}
+.trust-item .ic{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:var(--gold-faint);display:flex;align-items:center;justify-content:center;font-size:20px}
+.trust-item strong{display:block;font-size:14.5px;margin-bottom:2px}
+.trust-item span{font-size:13px;color:var(--muted)}
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.about-card{background:var(--navy);color:#fff;border-radius:var(--radius);padding:44px 40px;box-shadow:var(--shadow);position:sticky;top:100px}
+.about-card .eyebrow{color:var(--gold-soft)}
+.about-card h3{font-size:28px;margin-bottom:16px}
+.about-card p{color:#c7d2e3;font-size:15.5px;margin-bottom:14px}
+.about-card .cred{margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:var(--gold-soft)}
+.about-copy p{margin-bottom:18px;color:#3c4a61;font-size:16.5px}
+.about-copy p strong{color:var(--ink)}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.skill{font-size:13.5px;font-weight:500;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;color:#3c4a61}
+/* ---------- SERVICES ---------- */
+#services{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:38px 34px;transition:transform .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.svc .n{font-family:'Fraunces',serif;font-size:15px;color:var(--gold);font-weight:700;letter-spacing:.1em;margin-bottom:12px}
+.svc h3{font-size:23px;margin-bottom:12px}
+.svc p{color:var(--muted);font-size:15.5px}
+/* ---------- PROCESS ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;position:relative}
+.step .step-n{width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;font-family:'Fraunces',serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.step:nth-child(1) .step-n{background:var(--gold);color:var(--navy)}
+.step h3{font-size:20px;margin-bottom:10px}
+.step p{font-size:14.5px;color:var(--muted)}
+.step .free{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--green);background:var(--green-bg);padding:5px 12px;border-radius:999px}
+/* ---------- PRICING ---------- */
+#pricing{background:var(--navy);color:#fff}
+#pricing .sec-sub{color:#9fb0c8}
+#pricing .eyebrow{color:var(--gold-soft)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.price{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:40px 34px;display:flex;flex-direction:column;transition:transform .25s}
+.price:hover{transform:translateY(-5px)}
+.price.pop{background:#fff;color:var(--ink);border-color:#fff;box-shadow:0 24px 60px -20px rgba(0,0,0,.5);position:relative}
+.pop-tag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.1em;padding:6px 18px;border-radius:999px;white-space:nowrap}
+.price h3{font-size:22px;margin-bottom:6px}
+.price .pname{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:14px;font-family:'Inter',sans-serif}
+.price.pop .pname{color:#a5812f}
+.price .amount{font-family:'Fraunces',serif;font-size:46px;font-weight:700;margin-bottom:4px}
+.price .per{font-size:13.5px;opacity:.65;margin-bottom:22px}
+.price ul{list-style:none;font-size:14.5px;margin-bottom:30px;flex:1}
+.price li{padding:8px 0 8px 30px;position:relative;border-bottom:1px dashed rgba(128,128,128,.18)}
+.price li:last-child{border:none}
+.price li::before{content:"✓";position:absolute;left:4px;color:var(--green);font-weight:700}
+.price.pop li::before{color:var(--green)}
+.price:not(.pop) li::before{color:var(--gold-soft)}
+.price .btn{align-self:stretch;text-align:center}
+.extras{margin-top:44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:30px 34px}
+.extras h4{font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:16px;font-family:'Inter',sans-serif}
+.extras ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;font-size:14.5px;color:#c7d2e3}
+.extras li b{color:#fff}
+/* ---------- FIT ---------- */
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.fit-card{border-radius:var(--radius);padding:40px 36px}
+.fit-yes{background:var(--green-bg);border:1px solid #cfe3d6}
+.fit-no{background:var(--red-bg);border:1px solid #eed2c9}
+.fit-card h3{font-size:23px;margin-bottom:20px}
+.fit-card ul{list-style:none;font-size:15.5px}
+.fit-card li{padding:9px 0 9px 34px;position:relative}
+.fit-yes li::before{content:"✓";position:absolute;left:2px;color:var(--green);font-weight:800;font-size:18px}
+.fit-no li::before{content:"✕";position:absolute;left:2px;color:var(--red);font-weight:800;font-size:18px}
+/* ---------- FAQ ---------- */
+#faq{background:#fff;border-top:1px solid var(--line)}
+.faq-list{max-width:780px}
+.faq{border-bottom:1px solid var(--line)}
+.faq button{width:100%;background:none;border:none;text-align:left;font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);padding:24px 48px 24px 0;cursor:pointer;position:relative}
+.faq button::after{content:"+";position:absolute;right:6px;top:22px;font-size:26px;color:var(--gold);font-weight:400;transition:transform .3s}
+.faq.open button::after{transform:rotate(45deg)}
+.faq .a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq .a p{padding:0 0 26px;color:var(--muted);font-size:15.5px;max-width:680px}
+/* ---------- CTA ---------- */
+.cta{background:radial-gradient(900px 500px at 50% 120%,#22395e 0%,var(--navy) 60%);color:#fff;text-align:center}
+.cta h2{font-size:clamp(30px,4vw,46px);margin:16px 0 16px}
+.cta h2 em{color:var(--gold-soft);font-style:italic}
+.cta p{color:#b9c6da;max-width:600px;margin:0 auto 30px;font-size:17px}
+.need{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin:40px 0;list-style:none;text-align:left}
+.need li{max-width:250px;font-size:14.5px;color:#c7d2e3}
+.need li b{display:block;color:#fff;font-size:15.5px;margin-bottom:6px}
+.need li .k{color:var(--gold);font-weight:700;margin-right:8px}
+.secure{font-size:13px;color:#8fa1bb;margin-top:26px}
+/* ---------- FOOTER ---------- */
+footer{background:#0a1424;color:#8fa1bb;padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .fbrand{font-family:'Fraunces',serif;color:#fff;font-size:20px;font-weight:700}
+footer .fbrand span{color:var(--gold)}
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .about-grid{grid-template-columns:1fr}
+  .about-card{position:static}
+  .svc-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .price-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}
+  .fit-grid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{position:fixed;top:72px;right:0;left:0;background:var(--cream);flex-direction:column;padding:24px;gap:20px;box-shadow:0 20px 30px rgba(0,0,0,.12);transform:translateY(-130%);transition:transform .35s}
+  .nav-links.open{transform:none}
+  .burger{display:block}
+  section{padding:72px 0}
+}
+@media(max-width:600px){.steps{grid-template-columns:1fr}.extras ul{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <div class="wrap bar">
+    <a class="brand" href="#top">Hammad<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="btn btn-navy btn-sm" href="https://www.fiverr.com/hammad_ali52/do-forensic-quickbooks-online-cleanup-and-bank-reconciliation" target="_blank" rel="noopener">Free Diagnostic</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">CA Inter · QuickBooks Online Specialist</span>
+      <h1>From messy books to <em>audit-ready.</em></h1>
+      <p class="lead">I'm Hammad — a Chartered Accountancy (CA Inter) professional. I do one thing exceptionally well: forensic QuickBooks cleanup. Broken, backlogged files rebuilt into clean, reconciled books your CPA will actually thank you for.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="https://www.fiverr.com/hammad_ali52/do-forensic-quickbooks-online-cleanup-and-bank-reconciliation" target="_blank" rel="noopener">Get a Free Diagnostic</a>
+        <a class="btn btn-outline" href="#pricing">See Packages</a>
+      </div>
+      <p class="hero-note"><strong>First step is free.</strong> Send me your file and I'll tell you honestly what's wrong, what it'll take to fix — and what it costs.</p>
+    </div>
+    <div class="ba" aria-hidden="true">
+      <div class="ledger before">
+        <h4>Before — the mess</h4>
+        <ul>
+          <li><span>Uncategorized expenses</span><span>$4,210</span></li>
+          <li><span>Undeposited funds</span><span>$1,930</span></li>
+          <li><span>Unreconciled accounts</span><span>14 months</span></li>
+          <li><span>Trial balance</span><span>won't balance</span></li>
+        </ul>
+      </div>
+      <div class="ba-arrow">↓</div>
+      <div class="ledger after">
+        <h4>After — the cleanup</h4>
+        <ul>
+          <li><span>Bank reconciliation</span><span class="tick">$0 variance ✓</span></li>
+          <li><span>Chart of Accounts</span><span class="tick">rebuilt ✓</span></li>
+          <li><span>Backlog cleared</span><span class="tick">period by period ✓</span></li>
+          <li><span>P&amp;L + Balance Sheet</span><span class="tick">CPA-ready ✓</span></li>
+        </ul>
+      </div>
+      <p class="ba-cap">ILLUSTRATIVE SAMPLE OF A FINISHED CLEANUP</p>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item reveal"><div class="ic">🎓</div><div><strong>CA Inter Professional</strong><span>12 advanced accounting, audit &amp; taxation papers cleared (ICAP)</span></div></div>
+    <div class="trust-item reveal"><div class="ic">💲</div><div><strong>Fixed-Price Quotes</strong><span>Scope approved before I touch a transaction — no hourly surprises</span></div></div>
+    <div class="trust-item reveal"><div class="ic">🔍</div><div><strong>Free File Diagnostic</strong><span>I'll tell you honestly what's broken before you pay anything</span></div></div>
+    <div class="trust-item reveal"><div class="ic">📋</div><div><strong>Verification Report</strong><span>Every fix documented, so you or your CPA can verify everything</span></div></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-card reveal">
+      <span class="eyebrow">About Hammad</span>
+      <h3>An accountant's accountant.</h3>
+      <p>I don't do data entry. I don't code bank feeds blindly. I reconcile to source documents and engineer books that survive scrutiny — from a lender, an auditor, or your CPA.</p>
+      <p>Every engagement starts the same way: an honest, free diagnostic of your file. If it's beyond repair, I'll tell you that too.</p>
+      <div class="cred">CA Inter — Institute of Chartered Accountants of Pakistan<br>12 advanced papers: accounting, audit &amp; taxation</div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">What that means for you</span>
+      <h2 class="sec-title">Your books, rebuilt by someone trained to find what's wrong.</h2>
+      <p><strong>CA Inter</strong> means I've cleared 12 advanced-level papers in accounting, auditing and taxation with the Institute of Chartered Accountants of Pakistan — the same qualification path as the country's top auditors. I bring that forensic, audit-minded discipline to every QuickBooks file I touch.</p>
+      <p>Most bookkeeping messes aren't one mistake — they're layers of them: a Chart of Accounts that never matched the business, months of unreconciled bank feeds, personal and business expenses tangled together, Stripe / Square / PayPal entries double-counted. I peel those layers back, <strong>period by period</strong>, until the file is clean.</p>
+      <p>And when I'm done, you don't have to take my word for it: every cleanup ends with a <strong>reconciliation report</strong> showing exactly what was fixed, so you — or your CPA — can verify every line.</p>
+      <div class="skills">
+        <span class="skill">QuickBooks Online</span><span class="skill">Bookkeeping</span><span class="skill">Bank Reconciliation</span><span class="skill">Account Reconciliation</span><span class="skill">Financial Accounting</span><span class="skill">Financial Reporting</span><span class="skill">Accounts Payable</span><span class="skill">Accounts Receivable</span><span class="skill">Microsoft Excel</span><span class="skill">Data Cleaning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow reveal">Services</span>
+    <h2 class="sec-title reveal">One specialty, done properly.</h2>
+    <p class="sec-sub reveal">I don't offer twenty services. I do cleanup and catch-up bookkeeping — and everything around it that makes your books trustworthy.</p>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="n">01</div><h3>Forensic Cleanups</h3><p>Rebuild broken Charts of Accounts, clear multi-month backlogs, trace missing historical entries, and fix files other freelancers gave up on.</p></div>
+      <div class="svc reveal"><div class="n">02</div><h3>Month-End Close &amp; Reconciliation</h3><p>Bank, credit card, and loan accounts reconciled properly — no more "Uncategorized Asset" or "Undeposited Funds" dumping grounds.</p></div>
+      <div class="svc reveal"><div class="n">03</div><h3>Catch-Up Bookkeeping</h3><p>6, 12, 24 months behind? I'll bring your books current, period by period, with a clean audit trail you can actually follow.</p></div>
+      <div class="svc reveal"><div class="n">04</div><h3>Management Reporting</h3><p>P&amp;L, Balance Sheet, and Cash Flow reports you'll actually understand — built for decisions, not just compliance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <span class="eyebrow reveal">How it works</span>
+    <h2 class="sec-title reveal">A process with no surprises.</h2>
+    <p class="sec-sub reveal">You approve the scope before I touch a single transaction. No hourly meter running.</p>
+    <div class="steps">
+      <div class="step reveal"><div class="step-n">1</div><h3>Free Diagnostic</h3><p>I audit your file and show you exactly what's broken — every error listed, backlog measured.</p><span class="free">FREE</span></div>
+      <div class="step reveal"><div class="step-n">2</div><h3>Fixed-Price Quote</h3><p>You approve the full scope and price upfront. What I quote is what you pay.</p></div>
+      <div class="step reveal"><div class="step-n">3</div><h3>Forensic Cleanup</h3><p>Every account reconciled to real bank statements. Chart of Accounts rebuilt. "Uncategorized" graveyards cleared. Double-counted Stripe / Square / PayPal / Venmo entries fixed.</p></div>
+      <div class="step reveal"><div class="step-n">4</div><h3>Verification Report</h3><p>Every account reconciled to zero variance, documented so you or your CPA can verify everything.</p></div>
+    </div>
+  </div>
+</section>
+<section id="pricing">
+  <div class="wrap">
+    <span class="eyebrow reveal">Packages</span>
+    <h2 class="sec-title reveal">Simple, fixed pricing.</h2>
+    <p class="sec-sub reveal">Pick a package or start with the diagnostic — most diagnostic clients upgrade once they see exactly what's broken.</p>
+    <div class="price-grid">
+      <div class="price reveal">
+        <h3>Basic</h3><div class="pname">Cleanup Diagnostic</div>
+        <div class="amount">$25</div><div class="per">2-day delivery</div>
+        <ul>
+          <li>Full forensic diagnostic of your QBO file</li>
+          <li>Every error listed, backlog measured</li>
+          <li>Fixed-price cleanup quote included</li>
+          <li>Honest verdict — even if it's beyond repair</li>
+        </ul>
+        <a class="btn btn-outline" href="https://www.fiverr.com/hammad_ali52/do-forensic-quickbooks-online-cleanup-and-bank-reconciliation" target="_blank" rel="noopener">Start Here</a>
+      </div>
+      <div class="price pop reveal">
+        <span class="pop-tag">MOST POPULAR</span>
+        <h3>Standard</h3><div class="pname">Catch-Up Cleanup</div>
+        <div class="amount">$95</div><div class="per">4-day delivery</div>
+        <ul>
+          <li>Up to 250 transactions reconciled</li>
+          <li>Chart of Accounts rebuilt</li>
+          <li>Bank + credit cards reconciled to statements</li>
+          <li>Clean P&amp;L and Balance Sheet</li>
+          <li>Zero-variance verification report</li>
+        </ul>
+        <a class="btn btn-gold" href="https://www.fiverr.com/hammad_ali52/do-forensic-quickbooks-online-cleanup-and-bank-reconciliation" target="_blank" rel="noopener">Order Standard</a>
+      </div>
+      <div class="price reveal">
+        <h3>Premium</h3><div class="pname">Full Rescue</div>
+        <div class="amount">$240</div><div class="per">7-day delivery</div>
+        <ul>
+          <li>Up to 12 months of backlog</li>
+          <li>Up to 4 bank / card accounts</li>
+          <li>Sales tax liability review</li>
+          <li>Lender-ready financial package</li>
+          <li>1 walkthrough consultation</li>
+        </ul>
+        <a class="btn btn-outline" href="https://www.fiverr.com/hammad_ali52/do-forensic-quickbooks-online-cleanup-and-bank-reconciliation" target="_blank" rel="noopener">Order Premium</a>
+      </div>
+    </div>
+    <div class="extras reveal">
+      <h4>Available add-ons</h4>
+      <ul>
+        <li><b>+$30</b> — Extra-fast delivery (half the time)</li>
+        <li><b>+$35</b> — Additional bank / credit card account</li>
+        <li><b>+$60</b> — Extra 3 months of backlog</li>
+        <li><b>+$80</b> — First month of ongoing bookkeeping</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <span class="eyebrow reveal">Is this for you?</span>
+    <h2 class="sec-title reveal">An honest filter.</h2>
+    <p class="sec-sub reveal">I'd rather turn away a bad fit than deliver a bad outcome.</p>
+    <div class="fit-grid">
+      <div class="fit-card fit-yes reveal">
+        <h3>This is for you if…</h3>
+        <ul>
+          <li>You're months (or years) behind on your bookkeeping</li>
+          <li>Your bank and credit card accounts haven't been properly reconciled</li>
+          <li>Your last bookkeeper left you a mess</li>
+          <li>Your CPA or lender asked for clean financials and you don't have them</li>
+          <li>You need catch-up bookkeeping done right, not just done fast</li>
+        </ul>
+      </div>
+      <div class="fit-card fit-no reveal">
+        <h3>This is not for you if…</h3>
+        <ul>
+          <li>You need tax filing or tax advice — I'm not a CPA; I make your file CPA-ready</li>
+          <li>You need payroll processing</li>
+          <li>You want the cheapest option and don't care about accuracy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow reveal">FAQ</span>
+    <h2 class="sec-title reveal">Questions, answered.</h2>
+    <p class="sec-sub reveal">The things every client asks before handing over their books.</p>
+    <div class="faq-list">
+      <div class="faq reveal"><button>How do I safely give you access to my QuickBooks?</button><div class="a"><p>You never share your password. In QuickBooks Online, go to Settings → Manage Users and invite me as an Accountant user. You keep full admin control and can remove my access the moment the job is done.</p></div></div>
+      <div class="faq reveal"><button>How long does a cleanup take?</button><div class="a"><p>The $25 diagnostic (2 days) tells you exactly. Standard cleanups deliver in 4 days, Premium in 7. If your backlog is over 12 months, message me first and I'll scope it as a custom offer.</p></div></div>
+      <div class="faq reveal"><button>Do you file taxes or handle payroll?</button><div class="a"><p>No — I'm not a CPA and I won't pretend to be. What I deliver is a CPA-ready file: reconciled, documented, and clean enough that your tax preparer charges you less, not more.</p></div></div>
+      <div class="faq reveal"><button>Will my financial data stay confidential?</button><div class="a"><p>Yes. NDA available on request, my access is revoked after delivery, and your data is never shared with anyone, ever.</p></div></div>
+      <div class="faq reveal"><button>What if my books are a total disaster?</button><div class="a"><p>That's literally what this service is for. Send me a screenshot of your Chart of Accounts or trial balance and I'll tell you honestly whether it's fixable — and what it'll take.</p></div></div>
+    </div>
+  </div>
+</section>
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Get started</span>
+    <h2 class="reveal">Start with a <em>free diagnostic.</em></h2>
+    <p class="reveal">Send me your file (or a screenshot of your Chart of Accounts) and I'll tell you honestly what's wrong, what it'll take to fix, and what it costs — before you spend a dollar.</p>
+    <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap"><a class="btn btn-gold" href="https://www.fiverr.com/hammad_ali52/do-forensic-quickbooks-online-cleanup-and-bank-reconciliation" target="_blank" rel="noopener" style="font-size:17px;padding:16px 40px">Order on Fiverr</a><a class="btn btn-outline" href="https://www.upwork.com/freelancers/~01299e83fb35e59869" target="_blank" rel="noopener" style="font-size:17px;padding:16px 40px">Hire on Upwork</a></div>
+    <ul class="need reveal">
+      <li><b><span class="k">1</span>QuickBooks access</b>Invite me as an Accountant user (Settings → Manage Users). No password sharing, ever.</li>
+      <li><b><span class="k">2</span>Bank statements</b>PDF statements for the cleanup period, so every account reconciles to source documents.</li>
+      <li><b><span class="k">3</span>Scope &amp; deadline</b>Which period to clean, and any deadline — tax filing, loan application, month-end.</li>
+    </ul>
+    <p class="secure reveal">Your access is revoked after delivery · NDA available on request · Your data is never shared with anyone</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Hammad<span>.</span></div>
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+      <a href="https://www.fiverr.com/hammad_ali52/do-forensic-quickbooks-online-cleanup-and-bank-reconciliation" target="_blank" rel="noopener" style="color:var(--gold-soft);text-decoration:none;font-weight:600">Fiverr</a>
+      <a href="https://www.upwork.com/freelancers/~01299e83fb35e59869" target="_blank" rel="noopener" style="color:var(--gold-soft);text-decoration:none;font-weight:600">Upwork</a>
+    </div>
+    <div>© <span id="yr">2026</span> Hammad · QuickBooks Cleanup Expert<br><span style="font-size:13px">Not a CPA — I make your file CPA-ready.</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>40)},{passive:true});
+  var burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+  burger.addEventListener('click',function(){links.classList.toggle('open')});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open')})});
+  document.querySelectorAll('.faq button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.parentElement,ans=item.querySelector('.a'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq.open').forEach(function(o){o.classList.remove('open');o.querySelector('.a').style.maxHeight=null});
+      if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
+    });
+  });
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=Math.min(i%4*70,210)+'ms';io.observe(el)});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
