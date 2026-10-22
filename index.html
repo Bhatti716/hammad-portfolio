@@ -120,6 +120,12 @@ nav .bar{display:flex;align-items:center;justify-content:space-between;height:76
 .marquee span{font-family:'Fraunces',serif;font-size:21px;font-style:italic;color:var(--muted);white-space:nowrap}
 .marquee span i{font-style:normal;color:var(--gold);margin-right:56px}
 @keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- watch ---------- */
+.video-frame{max-width:920px;margin:46px auto 0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.video-frame video{width:100%;display:block;aspect-ratio:16/9;background:#000}
+.video-cap{max-width:920px;margin:18px auto 0;text-align:center;color:var(--muted);font-size:14.5px}
+.video-cap b{color:var(--ink)}
 /* ---------- sections common ---------- */
 .sec-num{font-family:'Fraunces',serif;font-size:15px;color:var(--faint);letter-spacing:.2em;margin-bottom:18px;display:flex;align-items:center;gap:14px}
 .sec-num::after{content:"";flex:0 0 60px;height:1px;background:var(--line)}
@@ -304,7 +310,8 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
   <div class="wrap bar">
     <a class="brand" href="#top" data-scroll>Hammad<em>.</em></a>
     <ul class="nav-links" id="navLinks">
-      <li><a class="nl" href="#about" data-scroll>About</a></li>
+      <li><a class="nl" href="#watch" data-scroll>Watch</a>
+      <a class="nl" href="#about" data-scroll>About</a></li>
       <li><a class="nl" href="#certifications" data-scroll>Certifications</a></li>
       <li><a class="nl" href="#services" data-scroll>Services</a></li>
       <li><a class="nl" href="#process" data-scroll>Process</a></li>
@@ -366,6 +373,20 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
   </div>
 </div>
 
+
+<section id="watch">
+  <div class="wrap">
+    <div class="sec-num" data-reveal>01 — Watch</div>
+    <h2 class="sec-title" data-reveal>Sixty seconds with <em>Hammad.</em></h2>
+    <p data-reveal style="color:var(--muted);max-width:640px">Before you hand over your books, hear how I work — in my own words. Forensic cleanup, bank reconciliation, and files your CPA can sign off on.</p>
+    <div class="video-frame" data-reveal>
+      <video controls preload="none" poster="video-poster.jpg" playsinline>
+        <source src="intro-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="video-cap" data-reveal><b>Hammad Ali Bhatti</b> · Intuit ProAdvisor Certified — QuickBooks Level 1 &amp; 2 · Forensic QuickBooks cleanup &amp; bank reconciliation</p>
+  </div>
+</section>
 <section id="about">
   <div class="wrap about-grid">
     <div class="about-visual" data-reveal>
@@ -374,7 +395,7 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
       </div>
     </div>
     <div class="about-copy">
-      <div class="sec-num" data-reveal>01 — About</div>
+      <div class="sec-num" data-reveal>02 — About</div>
       <h2 class="sec-title" data-reveal>Your books, rebuilt by someone <em>trained to find what's wrong.</em></h2>
       <div data-reveal>
         <p><strong>CA Inter</strong> means I've cleared 12 advanced-level papers in accounting, auditing and taxation with the Institute of Chartered Accountants of Pakistan — the same qualification path as the country's top auditors. I bring that forensic, audit-minded discipline to every QuickBooks file I touch.</p>
@@ -393,7 +414,7 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
 </section>
 <section id="certifications">
   <div class="wrap">
-    <div class="sec-num" data-reveal>02 — Certifications</div>
+    <div class="sec-num" data-reveal>03 — Certifications</div>
     <h2 class="sec-title" data-reveal>Certified by Intuit. <em>Verifiable, not just claimed.</em></h2>
     <p class="sec-sub" data-reveal>Anyone can call themselves a "QuickBooks expert". Hammad holds Intuit's own ProAdvisor certifications — earned by examination and issued in his name by the Intuit ProAdvisor Academy. Both certificates are shown in full below: open the originals and check them yourself.</p>
     <div class="cert-grid">
@@ -426,7 +447,7 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
 
 <section id="services">
   <div class="wrap">
-    <div class="sec-num" data-reveal>03 — Services</div>
+    <div class="sec-num" data-reveal>04 — Services</div>
     <h2 class="sec-title" data-reveal>One specialty, <em>done properly.</em></h2>
     <p class="sec-sub" data-reveal>I don't offer twenty services. I do cleanup and catch-up bookkeeping — and everything around it that makes your books trustworthy.</p>
     <div class="svc-grid">
@@ -440,7 +461,7 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
 
 <section id="process">
   <div class="wrap">
-    <div class="sec-num" data-reveal>04 — Process</div>
+    <div class="sec-num" data-reveal>05 — Process</div>
     <h2 class="sec-title" data-reveal>A process with <em>no surprises.</em></h2>
     <p class="sec-sub" data-reveal>You approve the scope before I touch a single transaction. No hourly meter running.</p>
     <div style="position:relative">
@@ -457,7 +478,7 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
 
 <section id="pricing">
   <div class="wrap">
-    <div class="sec-num" data-reveal>05 — Pricing</div>
+    <div class="sec-num" data-reveal>06 — Pricing</div>
     <h2 class="sec-title" data-reveal>Simple, <em>fixed pricing.</em></h2>
     <p class="sec-sub" data-reveal>Pick a package — or start with the diagnostic. Most diagnostic clients upgrade once they see exactly what's broken.</p>
     <div class="price-grid">
@@ -510,7 +531,7 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
 
 <section id="fit">
   <div class="wrap">
-    <div class="sec-num" data-reveal>06 — Fit</div>
+    <div class="sec-num" data-reveal>07 — Fit</div>
     <h2 class="sec-title" data-reveal>An <em>honest</em> filter.</h2>
     <p class="sec-sub" data-reveal>I'd rather turn away a bad fit than deliver a bad outcome.</p>
     <div class="fit-grid">
@@ -538,7 +559,7 @@ footer .fnote{font-size:13.5px;color:var(--faint);text-align:right;line-height:1
 
 <section id="faq">
   <div class="wrap">
-    <div class="sec-num" data-reveal>07 — FAQ</div>
+    <div class="sec-num" data-reveal>08 — FAQ</div>
     <h2 class="sec-title" data-reveal>Questions, <em>answered.</em></h2>
     <p class="sec-sub" data-reveal>The things every client asks before handing over their books.</p>
     <div class="faq-list">
